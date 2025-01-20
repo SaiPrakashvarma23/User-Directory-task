@@ -73,16 +73,16 @@ const Home = () => {
   };
 
   return (
-    <div className={`home-container ${theme}`}>
-      <div className="header-container">
+    <div className={`container-home ${theme}`}>
+      <div className="header-layout">
         {/* Moon/Sun Icon for Dark/Light Mode */}
         <button className="theme-toggle-btn" onClick={toggleTheme}>
           {theme === "light" ? <FaMoon /> : <FaSun />}
         </button>
         {/* Centered Header */}
-        <h1 className="home-header">User Directory</h1>
+        <h1 className="header-text">User Directory</h1>
         {/* Sorting section on the right */}
-        <div className="sort-container">
+        <div className="sort-options">
           <label htmlFor="sort">Sort Users:</label>
           <select
             id="sort"
@@ -97,7 +97,7 @@ const Home = () => {
       </div>
 
       {/* Search bar */}
-      <div className="search-container">
+      <div className="search-bar">
         <input
           type="text"
           placeholder="Search by name"
@@ -108,14 +108,14 @@ const Home = () => {
       </div>
 
       {/* Display filtered and sorted users */}
-      <div className="user-cards-container">
+      <div className="cards-container">
         {currentUsers.map((user) => (
           <UserCard key={user.id} user={user} />
         ))}
       </div>
 
       {/* Pagination */}
-      <div className="pagination-container">
+      <div className="pagination-controls">
         <button
           onClick={() => paginate(currentPage - 1)}
           disabled={currentPage === 1}

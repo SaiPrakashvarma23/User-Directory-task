@@ -1,93 +1,136 @@
 /* Main container styling */
-.user-detail-container {
-  font-family: 'Arial', sans-serif;
-  padding: 20px;
-  max-width: 600px;
-  margin: 20px auto;
-  background-color: #F0F8FF;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1;
+  color: #34495e;
 }
 
-/* Go back button */
-/* Go back button */
+/* User Detail Container */
+.user-detail-container {
+  padding: 30px;
+  max-width: 600px;
+  margin: 30px auto;
+  background: linear-gradient(145deg, #f0f8ff, #d9eaf7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.user-detail-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Go Back Button */
 .go-back-button {
   display: flex;
   align-items: center;
   background-color: #3498db;
   color: #fff;
-  padding: 6px 12px;  /* Reduced padding */
+  padding: 12px 18px; /* More padding for a bigger, clickable button */
   border: none;
-  border-radius: 5px;
-  font-size: 0.9rem;  /* Smaller font size */
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  margin-bottom: 15px;
-  transition: background-color 0.3s ease;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .go-back-button:hover {
-  background-color: #2c7fbf;
+  background-color: #2980b9;
+  transform: scale(1.05);
 }
 
 .back-icon {
-  margin-right: 5px;
-  font-size: 1.2rem;  /* Slightly smaller icon */
+  margin-right: 8px;
+  font-size: 1.4rem; /* Larger icon for better visibility */
 }
 
-
-/* User card container */
+/* User Card Container */
 .user-card {
   text-align: left;
-  padding: 20px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* User details container - Removed background color */
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* User Details Section */
 .user-details {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  padding: 15px;
 }
 
-/* Header styling */
+/* Header Styling */
 .user-detail-header {
   color: #2c3e50;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* Individual detail row styling */
+/* Detail Row Styling */
 .user-detail-row {
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #34495e;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.user-detail-row:hover {
+  color: #3498db;
 }
 
 .user-detail-row span {
-  font-weight: bold;
-  margin-left: 10px;
+  font-weight: 600;
+  margin-left: 15px;
   color: #2c3e50;
 }
 
-/* Icon styling */
+/* Icon Styling */
 .detail-icon {
-  color: #242124;
-  margin-right: 10px;
-  font-size: 1.1rem; /* Larger icons for better visibility */
+  color: #3498db;
+  margin-right: 15px;
+  font-size: 1.5rem; /* Larger icons for better visibility */
+  transition: color 0.3s ease;
 }
 
-/* Link styling */
+.detail-icon:hover {
+  color: #2980b9;
+}
+
+/* Link Styling */
 a {
-  color: #1a1110;
+  color: #3498db;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
+  color: #e74c3c;
   text-decoration: underline;
+  transform: scale(1.1);
 }
 
-/* Loading spinner */
+/* Loading Spinner */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -97,13 +140,13 @@ a:hover {
 }
 
 .loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  width: 70px;
+  height: 70px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 10px;
+  animation: spin 1.5s linear infinite;
+  margin-bottom: 20px;
 }
 
 @keyframes spin {
@@ -115,9 +158,22 @@ a:hover {
   }
 }
 
-/* Error text styling */
+/* Error Text Styling */
 .error-text {
   text-align: center;
   color: #e74c3c;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
