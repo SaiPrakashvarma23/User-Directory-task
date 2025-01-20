@@ -1,71 +1,77 @@
-.user-card {
+:root {
+  --highlight-color: #19c5ff;
+  --muted-color: #7f8c8d;
+  --focus-color: #0056b3;
+  --card-background: white;
+  --border-light: #e0e0e0;
+  --primary-text: #2c3e50;
+}
+
+.card-container {
   display: flex;
   align-items: center;
-  background-color: white;
-  border: 1px solid #e0e0e0;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-light);
   border-radius: 10px;
   padding: 15px;
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-.user-card:hover {
+.card-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.user-icon {
+.icon-wrapper {
   margin-right: 20px;
 }
 
-.user-details {
-  flex: 1;
+.card-content {
+  flex-grow: 1;
 }
 
-.user-name {
+.card-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--primary-text);
   margin: 0;
 }
 
-.user-info {
+.card-details {
   font-size: 1rem;
-  color: #7f8c8d;
+  color: var(--muted-color);
   margin: 5px 0;
   display: flex;
   align-items: center;
 }
 
-.icon {
+.icon-style {
   margin-right: 10px;
-  color: #19c5ff;
+  color: var(--highlight-color);
 }
 
-.view-details-link {
+.view-more-link {
   display: inline-flex;
   align-items: center;
   color: black;
   text-decoration: none;
   font-weight: normal;
   margin-top: 12px;
-  transition: color 0.3s;
+  transition: color 0.3s ease-out;
 }
 
-.view-details-link:hover {
-  color: #0056b3;
+.view-more-link:hover {
+  color: var(--focus-color);
 }
 
-.arrow-icon {
-
+.arrow-style {
   margin-left: 6px;
-  font-size: 0.85rem;
-  /* Adjusted size */
-  transition: transform 0.3s;
-
+  font-size: 0.85rem; /* Reduced size */
+  transition: transform 0.3s ease-out;
 }
 
-.view-details-link:hover .arrow-icon {
+.view-more-link:hover .arrow-style {
   transform: translateX(4px);
 }

@@ -5,17 +5,17 @@ import "./UserCard.css";
 
 const UserCard = ({ user }) => {
   return (
-    <div className="user-card">
-      <div className="user-details">
-        <h3 className="user-name">{user.name}</h3>
-        <p className="user-info">
+    <div className="card-container">
+      <div className="card-content">
+        <h3 className="card-title">{user.name}</h3>
+        <p className="card-details">
           <FaEnvelope className="icon" /> {user.email}
         </p>
-        <p className="user-info">
-          <FaCity className="icon" /> {user.address.city}
+        <p className="card-details">
+          <FaCity className="icon-style" /> {user.address.city}
         </p>
-        <Link to={`/user/${user.id}`} className="view-details-link">
-          View Details <FaArrowRight className="arrow-icon" />
+        <Link to={`/user/${user.id}`} className="view-more-link">
+          View Details <FaArrowRight className="arrow-style" />
         </Link>
       </div>
     </div>
