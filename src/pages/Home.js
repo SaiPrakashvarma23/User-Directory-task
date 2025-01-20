@@ -83,7 +83,7 @@ const Home = () => {
         <h1 className="header-text">User Directory</h1>
         {/* Sorting section on the right */}
         <div className="sort-options">
-          <label htmlFor="sort">Sort Users: </label>
+          <label htmlFor="sort">Sort Users:</label>
           <select
             id="sort"
             value={sortOrder}
