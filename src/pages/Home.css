@@ -43,7 +43,7 @@ body {
   font-weight: 600;
   color: var(--text-color, #333);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
   transition: color 0.3s;
 }
